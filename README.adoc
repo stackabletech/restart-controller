@@ -1,0 +1,20 @@
+= Stackable Restart Controller
+
+This is a Kubernetes controller that restarts `Pod` objects whenever an object that they depend on (such as a `ConfigMap`) changes.
+
+== Supported resources
+
+Currently, it supports restarting `Pod` objects owned by the following controller types:
+
+* `StatefulSet`
+
+Whenever any of the following objects change:
+
+* `ConfigMap`
+* `Secret`
+
+== Usage
+
+Run with `cargo run`.
+
+In order for a pod to be restarted, its controller object (such as `StatefulSet`) must have the label `restarter.stackable.tech/enabled: "true"`.
