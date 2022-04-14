@@ -1,5 +1,7 @@
 = Stackable Restart Controller
 
+**WARNING: This repo is outdated. The restart-controller has moved to the** https://github.com/stackabletech/commons-operator[commons-operator]
+
 This is a Kubernetes controller that restarts `Pod` objects whenever an object that they depend on (such as a `ConfigMap`) changes.
 
 == Supported resources
